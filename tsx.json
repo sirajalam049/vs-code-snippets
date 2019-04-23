@@ -6,6 +6,7 @@
             "import { createStyles, WithStyles, withStyles } from '@material-ui/core'",
             "import { connect } from 'react-redux'",
             "import { ThunkDispatch } from 'redux-thunk';",
+            "import { withRouter, RouteComponentProps } from 'react-router';",
             "",
             "interface IStateProps { }",
             "",
@@ -15,7 +16,7 @@
             "",
             "interface OwnProps {}",
             "",
-            "interface IProps extends WithStyles<typeof STYLES>, IStateProps, IDispatchProps, OwnProps { }",
+            "interface IProps extends WithStyles<typeof STYLES>, IStateProps, IDispatchProps, RouteComponentProps<any>, OwnProps { }",
             "",
             "class ${1:$TM_FILENAME_BASE} extends Component <IProps, IState> {",
             "",
@@ -41,7 +42,7 @@
             "",
             "})",
             "",
-            "export default connect<IStateProps, IDispatchProps, OwnProps, ${2:TReduxStore}>(mapStateToProps, mapDispatchToProps)(withStyles(STYLES)(${1:$TM_FILENAME_BASE}))"
+            "export default withRouter(connect<IStateProps, IDispatchProps, OwnProps, ${2:TReduxStore}>(mapStateToProps, mapDispatchToProps)(withStyles(STYLES)(${1:$TM_FILENAME_BASE})))"
         ]
     },
     "React Component Without Redux": {
@@ -49,8 +50,9 @@
         "body": [
             "import React, { Component } from 'react'",
             "import { createStyles, WithStyles, withStyles } from '@material-ui/core'",
+            "import { withRouter, RouteComponentProps } from 'react-router';",
             "",
-            "interface IProps extends WithStyles<typeof STYLES> { }",
+            "interface IProps extends WithStyles<typeof STYLES>, RouteComponentProps<any> { }",
             "",
             "class ${1:$TM_FILENAME_BASE} extends Component<IProps> {",
             "",
@@ -68,7 +70,7 @@
             "",
             "})",
             "",
-            "export default withStyles(STYLES)(${1:$TM_FILENAME_BASE})"
+            "export default withRouter(withStyles(STYLES)(${1:$TM_FILENAME_BASE}))"
         ]
     },
     "React Native Component Without Redux": {
