@@ -1,6 +1,6 @@
 {
     "React Component With Redux Snipper": {
-        "prefix": "mrcred",
+        "prefix": "rcred",
         "body": [
             "import React, { Component } from 'react'",
             "import { createStyles, WithStyles, withStyles } from '@material-ui/core'",
@@ -45,7 +45,7 @@
         ]
     },
     "React Component Without Redux": {
-        "prefix": "mrcc",
+        "prefix": "rcc",
         "body": [
             "import React, { Component } from 'react'",
             "import { createStyles, WithStyles, withStyles } from '@material-ui/core'",
@@ -72,7 +72,7 @@
         ]
     },
     "React Native Component Without Redux": {
-        "prefix": "mrncc",
+        "prefix": "rncc",
         "body": [
             "import React, { Component } from 'react'",
             "import { StyleSheet, View } from 'react-native';",
@@ -103,7 +103,7 @@
         ]
     },
     "React Native Component With Redux Snipper": {
-        "prefix": "mrncred",
+        "prefix": "rncred",
         "body": [
             "import React, { Component } from 'react'",
             "import { connect } from 'react-redux'",
