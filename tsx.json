@@ -73,6 +73,30 @@
             "export default withRouter(withStyles(STYLES)(${1:$TM_FILENAME_BASE}))"
         ]
     },
+    "React Function Component without Redux": {
+        "prefix": "rfcc",
+        "body": [
+            "import React, { Component } from 'react'",
+            "import { createStyles, WithStyles, withStyles } from '@material-ui/core'",
+            "import { withRouter, RouteComponentProps } from 'react-router';",
+            "",
+            "interface IProps extends WithStyles<typeof STYLES>, RouteComponentProps<any> { }",
+            "",
+            "function ${1:$TM_FILENAME_BASE}(props:IProps){",
+            "\treturn (",
+            "\t\t<div>",
+            "\t\t\t",
+            "\t\t</div>",
+            "\t)",
+            "}",
+            "",
+            "const STYLES = (theme: ${2: typeof MuiTheme}) => createStyles({",
+            "",
+            "})",
+            "",
+            "export default withRouter(withStyles(STYLES)(${1:$TM_FILENAME_BASE}))"
+        ]
+    },
     "React Native Component Without Redux": {
         "prefix": "rncc",
         "body": [
