@@ -76,25 +76,28 @@
     "React Function Component without Redux": {
         "prefix": "rfcc",
         "body": [
-            "import React, { Component } from 'react'",
-            "import { createStyles, WithStyles, withStyles } from '@material-ui/core'",
-            "import { withRouter, RouteComponentProps } from 'react-router';",
+            "import React, { FC } from 'react'",
+            "import { createStyles, Theme, Box } from '@material-ui/core'",
+            "import { makeStyles } from '@material-ui/styles';",
             "",
-            "interface IProps extends WithStyles<typeof STYLES>, RouteComponentProps<any> { }",
+            "export interface ${1:$TM_FILENAME_BASE}Props { }",
             "",
-            "function ${1:$TM_FILENAME_BASE}(props:IProps){",
+            "const ${1:$TM_FILENAME_BASE}: FC<${1:$TM_FILENAME_BASE}Props> = (props) =>{",
+            "\tconst classes = useStyles(); ",
             "\treturn (",
-            "\t\t<div>",
+            "\t\t<Box>",
             "\t\t\t",
-            "\t\t</div>",
+            "\t\t</Box>",
             "\t)",
             "}",
             "",
-            "const STYLES = (theme: ${2: typeof MuiTheme}) => createStyles({",
+            "const useStyles = makeStyles<Theme>((theme) => {",
+            "\treturn (createStyles({",
             "",
+            "\t}))",
             "})",
             "",
-            "export default withRouter(withStyles(STYLES)(${1:$TM_FILENAME_BASE}))"
+            "export default ${1:$TM_FILENAME_BASE}"
         ]
     },
     "React Native Component Without Redux": {
