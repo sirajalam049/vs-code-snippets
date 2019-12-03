@@ -173,5 +173,20 @@
             "",
             "export default connect<IStateProps, IDispatchProps, OwnProps, ${2:TReduxStore} >(mapStateToProps, mapDispatchToProps)(${1:$TM_FILENAME_BASE})"
         ]
+    },
+    "React Native Function Component": {
+        "prefix": "rnfc",
+        "body": [
+            "import React, { FC } from \"react\";",
+            "",
+            "export interface ${1:$TM_FILENAME_BASE}Props {",
+            "\t",
+            "}",
+            "",
+            "const ${1:$TM_FILENAME_BASE}:FC = (props) => {",
+            "\treturn null;",
+            "}",
+            "export default ${1:$TM_FILENAME_BASE};"
+        ]
     }
 }
